@@ -1,4 +1,4 @@
-/* ===== 기본 ===== */
+/*기본*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +11,7 @@ body {
   color: #222;
 }
 
-/* ===== 상단바 ===== */
+/*상단바*/
 .top-header{
   background:#fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -43,7 +43,7 @@ body {
   color:#6f63d2;
 }
 
-/* ===== 글 작성 버튼 바 ===== */
+/*글 작성 버튼 바*/
 .write-bar{
   background:#6f63d2;
   padding: 20px 40px;
@@ -57,7 +57,7 @@ body {
 }
 
 
-/* ===== 기록 리스트 영역 ===== */
+/*기록 리스트 영역*/
 .record-section {
   max-width: 1100px;
   margin: 40px auto;
@@ -70,7 +70,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== 티켓 카드 ===== */
+/*티켓 카드*/
 .ticket {
   position: relative;
   background-color: #c7cde6;
@@ -90,7 +90,7 @@ body {
   border-right: 2px dotted rgba(255,255,255,0.8);
 }
 
-/* ===== 티켓 내용 ===== */
+/* 티켓 내용*/
 .ticket-title {
   font-size: 20px;
   font-weight: 700;
@@ -110,7 +110,7 @@ body {
   color: #555;
 }
 
-/* ===== 수정 / 삭제 버튼 ===== */
+/*수정 / 삭제 버튼*/
 .ticket-actions {
   position: absolute;
   top: 20px;
@@ -142,7 +142,7 @@ body {
   background-color: #ffd6d6;
 }
 
-/* ===== 기록 없을 때 ===== */
+/*기록 없을 때*/
 .empty-text {
   font-size: 15px;
   color: #666;
