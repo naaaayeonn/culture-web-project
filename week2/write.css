@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f7f7f7;
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 전체 컨테이너 */
+.write-container {
+    padding: 60px;
+}
+
+/* 폼 레이아웃 */
+.write-form {
+    display: flex;
+    gap: 40px;
+}
+
+/* 사진 박스 */
+.photo-box {
+    width: 300px;
+    height: 420px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-box label {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.photo-box input {
+    width: 80%;
+}
+
+/* 티켓 박스 */
+.ticket-box {
+    flex: 1;
+    background: #b8bedc;
+    border-radius: 28px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* 티켓 옆 둥근 홈 효과 */
+.ticket-box::before,
+.ticket-box::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background: #f7f7f7;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.ticket-box::before {
+    left: -20px;
+}
+
+.ticket-box::after {
+    right: -20px;
+}
+
+/* 입력 요소 */
+.ticket-box input,
+.ticket-box textarea {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.ticket-box textarea {
+    height: 200px;
+    resize: none;
+}
+
+/* 버튼 */
+.ticket-box button {
+    background: #6a5acd;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+.ticket-box button:hover {
+    background: #5949c6;
+}
