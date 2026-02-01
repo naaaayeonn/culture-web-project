@@ -1,0 +1,149 @@
+/* ===== 기본 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* ===== 상단바 ===== */
+.top-header{
+  background:#fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.top-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px 40px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.top-nav a{
+  margin-left: 30px;
+  text-decoration:none;
+  font-size:18px;
+  color:#333;
+  font-weight:600;
+}
+
+.top-nav a.active{
+  color:#6f63d2;
+}
+
+/* ===== 글 작성 버튼 바 ===== */
+.write-bar{
+  background:#6f63d2;
+  padding: 20px 40px;
+}
+
+.write-btn{
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+
+/* ===== 기록 리스트 영역 ===== */
+.record-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.record-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ===== 티켓 카드 ===== */
+.ticket {
+  position: relative;
+  background-color: #c7cde6;
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* 점선 절취선 */
+.ticket::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  right: 90px;
+  border-right: 2px dotted rgba(255,255,255,0.8);
+}
+
+/* ===== 티켓 내용 ===== */
+.ticket-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ticket-content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 16px;
+  max-width: 75%;
+}
+
+.ticket-date {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== 수정 / 삭제 버튼 ===== */
+.ticket-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.ticket-actions a {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.ticket-actions a:hover {
+  background-color: #eef0ff;
+}
+
+.ticket-actions .delete {
+  background-color: #ffecec;
+  color: #c0392b;
+}
+
+.ticket-actions .delete:hover {
+  background-color: #ffd6d6;
+}
+
+/* ===== 기록 없을 때 ===== */
+.empty-text {
+  font-size: 15px;
+  color: #666;
+}
