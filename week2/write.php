@@ -27,13 +27,10 @@ if (!isset($_SESSION['username'])) {
 <main class="write-container">
     <form action="write_process.php" method="post" enctype="multipart/form-data" class="write-form">
 
-        <!-- 사진 영역 -->
         <div class="photo-box">
             <label for="photo">사진</label>
             <input type="file" name="photo" id="photo" accept="image/*">
         </div>
-
-        <!-- 글 영역 -->
         <div class="ticket-box">
             <input
                 type="text"
