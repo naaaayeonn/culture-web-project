@@ -26,15 +26,12 @@ $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php foreach ($records as $row): ?>
     <div class="ticket">
 
-        <!-- 왼쪽: 사진 영역 -->
         <div class="ticket-image">
             사진
         </div>
 
-        <!-- 오른쪽: 글 영역 -->
         <div class="ticket-content">
 
-            <!-- 수정 / 삭제 (작성자 본인만) -->
             <?php if ($row['username'] === $_SESSION['username']): ?>
                 <div class="ticket-actions">
                     <a href="edit.php?id=<?= $row['id'] ?>" class="btn small">수정</a>
