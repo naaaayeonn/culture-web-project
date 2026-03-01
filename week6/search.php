@@ -78,8 +78,8 @@ if ($q !== "") {
       padding: 12px 16px;
       border-radius: 12px;
       border: none;
-      background: #6f63d2;
-      color: #fff;
+      background: #c7cde6;
+      color: block;
       font-weight: 700;
       cursor: pointer;
     }
@@ -102,6 +102,92 @@ if ($q !== "") {
       margin-right: 12px;
       opacity: .85;
     }
+
+    .record-section {
+    max-width: 1000px;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+  }
+
+  .ticket {
+    position: relative;
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: 0.25s;
+  }
+
+  .ticket:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+  }
+
+  /* 제목 */
+  .ticket-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .title-link {
+    text-decoration: none;
+    color: #222;
+  }
+
+  .title-link:hover {
+    color: #6c79d8;
+  }
+
+  /* 메타 정보 */
+  .ticket-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+
+  .ticket-meta span {
+    margin-right: 14px;
+  }
+
+  /* 내용 */
+  .ticket-content {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  /* 날짜 */
+  .ticket-date {
+    font-size: 13px;
+    color: #999;
+  }
+
+  /* 수정 삭제 버튼 */
+  .ticket-actions {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .ticket-actions a {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .ticket-actions a:hover {
+    color: #000;
+  }
+
+  .ticket-actions .delete {
+    color: #c0392b;
+  }
   </style>
 </head>
 <body>
@@ -161,7 +247,9 @@ if ($q !== "") {
         <?php endif; ?>
 
         <div class="ticket-title">
+          <a href="view.php?id=<?= $row['id'] ?>" class="title-link">
           <?= htmlspecialchars($row['title']) ?>
+          </a>
         </div>
 
         <div class="ticket-meta">
@@ -174,14 +262,7 @@ if ($q !== "") {
           <span>작성자: <?= htmlspecialchars($row['username']) ?></span>
         </div>
 
-        <div class="ticket-content">
-          <?= nl2br(htmlspecialchars($row['content'])) ?>
-        </div>
-
-        <div class="ticket-date">
-          <?= htmlspecialchars($row['created_at']) ?>
-        </div>
-
+    
       </div>
     <?php endforeach; ?>
   <?php endif; ?>
